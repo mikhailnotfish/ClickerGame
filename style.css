@@ -1,16 +1,20 @@
 :root{--bg:#071028;--card:#0f1724;--accent:#000000;--text:#000000}
 *{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family:system-ui,Arial;background:#000000;color:var(--text)}
+html,body{min-height:100%;margin:0;padding:0;font-family:system-ui,Arial;background:#000000;color:var(--text)}
 
 body{
   background-image: url('https://art.pixilart.com/48da5ba0b6eb389.png');
   background-repeat: repeat;
-  background-size: 256px 256px; 
-  image-rendering: pixelated;  
+  background-size: 256px 256px;
+  background-attachment: fixed;
+  image-rendering: pixelated;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px 0;
 }
 
 .card{
-  max-width:720px;margin:40px auto;padding:24px;border-radius:12px;
+  max-width:720px;margin:0 auto;padding:24px;border-radius:12px;
   background-image: url('https://yt3.googleusercontent.com/9AyN89Tiixaszr4ZQazb7ycV93VXC4Zh6WZpA0CQ6voychTRQ-I5gzBCe8jHceGwpVAwCkJ-=s900-c-k-c0x00ffffff-no-rj');
   background-repeat: repeat;
   background-size: 256px 256px;
@@ -20,7 +24,7 @@ body{
   image-rendering: pixelated;
 }
 
-.controls{display:flex;gap:12px;align-items:center;margin-top:12px}
+.controls{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:12px}
 
 button{
   background: #000;
@@ -29,8 +33,6 @@ button{
   padding: 10px 14px;
   border-radius: 8px;
   cursor: pointer;
-
-  /* clicky motion */
   transition: transform 0.08s ease, box-shadow 0.08s ease;
   box-shadow: 0 4px 0 #333;
   position: relative;
@@ -45,3 +47,8 @@ button:active{
 }
 
 hr{border:0;border-top:1px solid rgba(255,255,255,.05);margin:18px 0}
+#btn{
+  padding: 20px 32px;
+  font-size: 20px;
+  font-weight: bold;
+}
