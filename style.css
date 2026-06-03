@@ -20,8 +20,28 @@ body{
   image-rendering: pixelated;
 }
 
-
 .controls{display:flex;gap:12px;align-items:center;margin-top:12px}
-button{background:var(--accent);color:white;border:0;padding:10px 14px;border-radius:8px;cursor:pointer}
-button:hover{opacity:.95}
+
+button{
+  background: #000;
+  color: white;
+  border: 0;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+
+  /* clicky motion */
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+  box-shadow: 0 4px 0 #333;
+  position: relative;
+  top: 0;
+}
+
+button:hover{ opacity: .95; }
+
+button:active{
+  transform: translateY(4px);
+  box-shadow: 0 0px 0 #333;
+}
+
 hr{border:0;border-top:1px solid rgba(255,255,255,.05);margin:18px 0}
